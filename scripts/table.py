@@ -6,7 +6,7 @@ from pathlib import Path
 def main():
     if "--head" in sys.argv:
         print("# Asset Pallet\n")
-        print("[![Asset Pallet Generator](https://github.com/NEON-BUIDL/booths/actions/workflows/main.yml/badge.svg)](https://github.com/NEON-BUIDL/booths/actions/workflows/main.yml)\n")
+        print("[![Asset Pallet Generator](https://github.com/madjin/asset-pallet/actions/workflows/main.yml/badge.svg)](https://github.com/madjin/asset-pallet/actions/workflows/main.yml)\n")
         print("Download templates: https://sketchfab.com/3d-models/remixable-booth-templates-d565cb7935744d6190b7d23b260e743b\n")
         print("\n")
         sys.exit(0)
