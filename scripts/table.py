@@ -4,6 +4,13 @@ import math
 from pathlib import Path
 
 def main():
+    if "--head" in sys.argv:
+        print("# Asset Pallet\n")
+        print("[![Asset Pallet Generator](https://github.com/NEON-BUIDL/booths/actions/workflows/main.yml/badge.svg)](https://github.com/NEON-BUIDL/booths/actions/workflows/main.yml)\n")
+        print("Download templates: https://sketchfab.com/3d-models/remixable-booth-templates-d565cb7935744d6190b7d23b260e743b\n")
+        print("\n")
+        sys.exit(0)
+
     if len(sys.argv) < 2:
         print("Usage: python table.py directory/")
         sys.exit(1)
@@ -11,17 +18,19 @@ def main():
     directory = sys.argv[1]
     pairs = {}
 
-    for glb in Path(directory).glob("*.glb"):
-        base = glb.stem
-        png = glb.with_suffix(".png")
-        if png.exists():
-            pairs[base] = (glb, png)
+    for root, dirs, files in os.walk(directory):
+        for glb in files:
+            if glb.endswith(".glb"):
+                base = Path(glb).stem
+                png = Path(root) / (base + ".png")
+                if png.exists():
+                    pairs[base] = (Path(root) / glb, png)
 
     count = len(pairs)
     size = int(math.sqrt(count))
 
     ## Change this later to be based on repo name
-    print(f" # {directory}")
+    print(f" ## {directory}")
     print("\n")
 
     print("|", end="")
@@ -51,3 +60,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

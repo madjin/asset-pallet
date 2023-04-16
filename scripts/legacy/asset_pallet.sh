@@ -10,7 +10,9 @@ process_files() {
 
     # Loop through all files of given filetype in the directory
     for file in $(find "$dir" -type f -iname ".$filetype"); do
+	echo $file
         local base_filename=$(basename "$file" .$filetype)
+	echo $base_filename
         local skip_gif=false skip_png=false
 
         [[ -f "$dir/$base_filename.gif" ]] && skip_gif=true

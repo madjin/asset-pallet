@@ -19,46 +19,20 @@ jobs:
 
     - name: Update pallet site
       run: |
-        echo "<!DOCTYPE html>" > index.html
-        echo "<html>" >> index.html
-        echo "<head>" >> index.html
-        echo "<meta charset=\"UTF-8\">" >> index.html
-        echo "<title>Image Gallery</title>" >> index.html
-        echo "<style>" >> index.html
-        echo "  .gallery {" >> index.html
-        echo "    display: grid;" >> index.html
-        echo "    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));" >> index.html
-        echo "    grid-gap: 10px;" >> index.html
-        echo "  }" >> index.html
-        echo "  .gallery img {" >> index.html
-        echo "    width: 100%;" >> index.html
-        echo "    height: 100%;" >> index.html
-        echo "    object-fit: cover;" >> index.html
-        echo "  }" >> index.html
-        echo "</style>" >> index.html
-        echo "</head>" >> index.html
-        echo "<body>" >> index.html
-        echo "<div class=\"gallery\">" >> index.html
+        chmod +x scripts/generate_html_gallery.sh
+        ./scripts/generate_html_gallery.sh models --head > index.html
+
 
     - name: Take screenshots and make pallet
       run: |
-        chmod +x scripts/asset_pallet.sh
-        ./scripts/asset_pallet.sh booths/opti glb png 512 512
-        ./scripts/asset_pallet.sh booths glb png 512 512
-        ./scripts/asset_pallet.sh upload glb png 512 512
-        echo "</div>" >> index.html
-        echo "</body>" >> index.html
-        echo "</html>" >> index.html
+        chmod +x scripts/process_files.sh
+        ./scripts/process_files.sh models glb png 512 512
+        ./scripts/generate_html_gallery.sh models --body --tail >> index.html
 
     - name: Update README
       run: |
-        echo "# Asset Pallet" > README.md
-        echo ""
-        echo "[![Asset Pallet Generator](https://github.com/NEON-BUIDL/booths/actions/workflows/main.yml/badge.svg)](https://github.com/NEON-BUIDL/booths/actions/workflows/main.yml)" >> README.md
-        echo "Download templates: https://sketchfab.com/3d-models/remixable-booth-templates-d565cb7935744d6190b7d23b260e743b" >> README.md
-        python scripts/table.py booths >> README.md
-        python scripts/table.py booths/opti >> README.md 
-        python scripts/table.py upload >> README.md 
+        python scripts/table.py --head > README.md
+        python scripts/table.py models >> README.md
       
 
     - name: Commit changes
