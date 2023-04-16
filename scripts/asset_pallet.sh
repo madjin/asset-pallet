@@ -45,7 +45,7 @@ generate_html_gallery() {
     local dir="$1"
     local filetype="$2"
 
-    find "$dir" -type f -name ".$output_type" | while read -r file; do
+    find "$dir" -type f -name "*.$output_type" | while read -r file; do
         local glb_file="${file%.*}.glb"
         echo "  <a href="$glb_file"><img src="$file"></a>" >> index.html
     done
