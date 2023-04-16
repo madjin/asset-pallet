@@ -1,2 +1,16 @@
-# asset-pallet
-asset pallet generator
+# booths
+Remixable 3D booth assets for showcasing your projects with
+
+Download all: https://sketchfab.com/3d-models/remixable-booth-templates-d565cb7935744d6190b7d23b260e743b
+
+## Inventory
+
+| 1 | 2 | 3 | 4 | 5 | 6 |
+| --- | --- | --- | --- | --- | --- |
+| [![Tubbycats_booth-v2](opti/Tubbycats_booth-v2.png)](opti/Tubbycats_booth-v2.glb) | [![omibooth2_final](opti/omibooth2_final.png)](opti/omibooth2_final.glb) | [![HEAT_Booth2_Final-v2](opti/HEAT_Booth2_Final-v2.png)](opti/HEAT_Booth2_Final-v2.glb) | [![HEAT_Booth1_Final-v1](opti/HEAT_Booth1_Final-v1.png)](opti/HEAT_Booth1_Final-v1.glb) | [![7oroy_BOOTH12](opti/7oroy_BOOTH12.png)](opti/7oroy_BOOTH12.glb) | [![M3TV_stage](opti/M3TV_stage.png)](opti/M3TV_stage.glb) |
+| [![astro_booth](opti/astro_booth.png)](opti/astro_booth.glb) | [![SmoothVoxelsBooth_v2](opti/SmoothVoxelsBooth_v2.png)](opti/SmoothVoxelsBooth_v2.glb) | [![mrmetaverse_booth2](opti/mrmetaverse_booth2.png)](opti/mrmetaverse_booth2.glb) | [![kiiba_booth](opti/kiiba_booth.png)](opti/kiiba_booth.glb) | [![arashi_geobooth](opti/arashi_geobooth.png)](opti/arashi_geobooth.glb) | [![booth_harambe](opti/booth_harambe.png)](opti/booth_harambe.glb) |
+| [![pearlhyacinth_neonboothfinaltwin](opti/pearlhyacinth_neonboothfinaltwin.png)](opti/pearlhyacinth_neonboothfinaltwin.glb) | [![pearl_twinboxbooth](opti/pearl_twinboxbooth.png)](opti/pearl_twinboxbooth.glb) | [![untitledxyz_booth](opti/untitledxyz_booth.png)](opti/untitledxyz_booth.glb) | [![phetta_booth](opti/phetta_booth.png)](opti/phetta_booth.glb) | [![HEAT_t69h_explaining_final](opti/HEAT_t69h_explaining_final.png)](opti/HEAT_t69h_explaining_final.glb) | [![svox_booth](opti/svox_booth.png)](opti/svox_booth.glb) |
+| [![HEAT_Smac_Dance1_Final](opti/HEAT_Smac_Dance1_Final.png)](opti/HEAT_Smac_Dance1_Final.glb) | [![MF_booth-v1](opti/MF_booth-v1.png)](opti/MF_booth-v1.glb) | [![acandar_booth-v1](opti/acandar_booth-v1.png)](opti/acandar_booth-v1.glb) | [![croquet](opti/croquet.png)](opti/croquet.glb) | [![WRG_M3-NeonB-VirtConf_Booth_simplygon](opti/WRG_M3-NeonB-VirtConf_Booth_simplygon.png)](opti/WRG_M3-NeonB-VirtConf_Booth_simplygon.glb) | [![DFWBOOTH](opti/DFWBOOTH.png)](opti/DFWBOOTH.glb) |
+| [![Animated_Boomboxhead2](opti/Animated_Boomboxhead2.png)](opti/Animated_Boomboxhead2.glb) | [![dfw-monoch](opti/dfw-monoch.png)](opti/dfw-monoch.glb) | [![aabooth](opti/aabooth.png)](opti/aabooth.glb) | [![megacube_2_-_booth_bronze](opti/megacube_2_-_booth_bronze.png)](opti/megacube_2_-_booth_bronze.glb) | [![dfw-emy](opti/dfw-emy.png)](opti/dfw-emy.glb) | [![3ov_booth](opti/3ov_booth.png)](opti/3ov_booth.glb) |
+| [![metagame](opti/metagame.png)](opti/metagame.glb) | [![uncannybooth](opti/uncannybooth.png)](opti/uncannybooth.glb) | [![wiredspace](opti/wiredspace.png)](opti/wiredspace.glb) | [![template_booth](opti/template_booth.png)](opti/template_booth.glb) | [![memory_booth](opti/memory_booth.png)](opti/memory_booth.glb) | [![magickbooth](opti/magickbooth.png)](opti/magickbooth.glb) |
+| [![cryptoavatars_Booth](opti/cryptoavatars_Booth.png)](opti/cryptoavatars_Booth.glb) | [![Cairn-Booth-optimized](opti/Cairn-Booth-optimized.png)](opti/Cairn-Booth-optimized.glb) | [![HEAT_t69h_Bop_v2](opti/HEAT_t69h_Bop_v2.png)](opti/HEAT_t69h_Bop_v2.glb) |

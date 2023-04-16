@@ -1,0 +1,70 @@
+name: Asset Pallet Generator
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install screenshot-glb
+      run: npm install --save @shopify/screenshot-glb
+
+    - name: Update pallet site
+      run: |
+        echo "<!DOCTYPE html>" > index.html
+        echo "<html>" >> index.html
+        echo "<head>" >> index.html
+        echo "<meta charset=\"UTF-8\">" >> index.html
+        echo "<title>Image Gallery</title>" >> index.html
+        echo "<style>" >> index.html
+        echo "  .gallery {" >> index.html
+        echo "    display: grid;" >> index.html
+        echo "    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));" >> index.html
+        echo "    grid-gap: 10px;" >> index.html
+        echo "  }" >> index.html
+        echo "  .gallery img {" >> index.html
+        echo "    width: 100%;" >> index.html
+        echo "    height: 100%;" >> index.html
+        echo "    object-fit: cover;" >> index.html
+        echo "  }" >> index.html
+        echo "</style>" >> index.html
+        echo "</head>" >> index.html
+        echo "<body>" >> index.html
+        echo "<div class=\"gallery\">" >> index.html
+
+    - name: Take screenshots and make pallet
+      run: |
+        chmod +x scripts/asset_pallet.sh
+        ./scripts/asset_pallet.sh booths/opti glb png 512 512
+        ./scripts/asset_pallet.sh booths glb png 512 512
+        ./scripts/asset_pallet.sh upload glb png 512 512
+        echo "</div>" >> index.html
+        echo "</body>" >> index.html
+        echo "</html>" >> index.html
+
+    - name: Update README
+      run: |
+        echo "# Asset Pallet" > README.md
+        echo ""
+        echo "[![Asset Pallet Generator](https://github.com/NEON-BUIDL/booths/actions/workflows/main.yml/badge.svg)](https://github.com/NEON-BUIDL/booths/actions/workflows/main.yml)" >> README.md
+        echo "Download templates: https://sketchfab.com/3d-models/remixable-booth-templates-d565cb7935744d6190b7d23b260e743b" >> README.md
+        python scripts/table.py booths >> README.md
+        python scripts/table.py booths/opti >> README.md 
+        python scripts/table.py upload >> README.md 
+      
+
+    - name: Commit changes
+      run: |
+        git config --global user.name "madjin"
+        git config --global user.email "32600939+madjin@users.noreply.github.com"
+        git add .
+        git commit -m "Update READMEs"
+        git push
