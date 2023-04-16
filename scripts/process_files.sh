@@ -30,7 +30,7 @@ process_files() {
                 for i in {0..5}; do
                     local yaw=$((i 45 % 315))
                     local filename="$base_filename-$i.png"
-                    screenshot-glb -i "$file" -w 512 -h 512 -m "orientation=0 0 $yaw" -o "$filename"
+                    node ./node_modules/.bin/screenshot-glb -i "$file" -w 512 -h 512 -m "orientation=0 0 $yaw" -o "$filename"
                 done
 
                 montage "$base_filename"-.png -tile 6x1 -geometry +0+0 -background none -resize 3072x512 "montage-$base_filename.png"
@@ -42,7 +42,7 @@ process_files() {
         # Process png files
         if [[ $output_type == "png" || $output_type == "both" ]]; then
             if [[ $skip_png == false ]]; then
-                screenshot-glb -i "$file" -w "$output_width" -h "$output_height" -m "orientation=0 0 180" -o "$dir"/"$base_filename.png"
+                node ./node_modules/.bin/screenshot-glb -i "$file" -w "$output_width" -h "$output_height" -m "orientation=0 0 180" -o "$dir"/"$base_filename.png"
             fi
         fi
     done
