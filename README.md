@@ -11,7 +11,8 @@ Download templates: https://sketchfab.com/3d-models/remixable-booth-templates-d5
 
 | 1 | 2 |
 | --- | --- |
-| [![ethlogo](models/ethlogo.png)](models/ethlogo.glb) | [![fridge](models/fridge.png)](models/fridge.glb) |
-| [![low_polly_japanese_maple_tree](models/low_polly_japanese_maple_tree.png)](models/low_polly_japanese_maple_tree.glb) | [![clocktower-20196-v1](models/clocktower-20196-v1.png)](models/clocktower-20196-v1.glb) |
-| [![laptop_black](models/laptop_black.png)](models/laptop_black.glb) | [![billboards](models/billboards.png)](models/billboards.glb) |
-| [![bed_-_lowpoly_remake](models/bed_-_lowpoly_remake.png)](models/bed_-_lowpoly_remake.glb) |
+| [![ethlogo](models/ethlogo.png)](models/ethlogo.glb) | [![3ovsoftwarebox](models/3ovsoftwarebox.png)](models/3ovsoftwarebox.glb) |
+| [![fridge](models/fridge.png)](models/fridge.glb) | [![low_polly_japanese_maple_tree](models/low_polly_japanese_maple_tree.png)](models/low_polly_japanese_maple_tree.glb) |
+| [![clocktower-20196-v1](models/clocktower-20196-v1.png)](models/clocktower-20196-v1.glb) | [![laptop_black](models/laptop_black.png)](models/laptop_black.glb) |
+| [![billboards](models/billboards.png)](models/billboards.glb) | [![bed_-_lowpoly_remake](models/bed_-_lowpoly_remake.png)](models/bed_-_lowpoly_remake.glb) |
+
