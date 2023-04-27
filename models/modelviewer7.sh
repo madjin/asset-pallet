@@ -47,7 +47,24 @@ for glb_file in *.glb; do
     <button onclick="document.querySelector('model-viewer').exitFullscreen()">Exit VR</button>
     <button onclick="document.querySelector('model-viewer').ar.activate()">AR Mode</button>
   </div>
-  <model-viewer src="${glb_file}" camera-controls auto-rotate touch-action="pan-y" skybox-image="${hdr_file}"></model-viewer>
+  <model-viewer src="${glb_file}" ar camera-controls auto-rotate touch-action="pan-y" skybox-image="${hdr_file}"></model-viewer>
+
+  <script type="module">
+  const modelViewer = document.querySelector('model-viewer');
+
+  modelViewer.addEventListener('load', () => {
+    if (modelViewer.canActivateAR) {
+      modelViewer.ar.addEventListener('sessionstarted', () => {
+        console.log('AR session started');
+      });
+      modelViewer.ar.addEventListener('sessionended', () => {
+        console.log('AR session ended');
+      });
+    } else {
+      console.warn('AR not supported');
+    }
+  });
+</script>
 </body>
 </html>
 EOL
